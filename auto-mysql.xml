@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<generatorConfiguration>
+ <!-- classPathEntry:数据库的JDBC驱动 -->
+  <classPathEntry location="d:\mysql-connector-java-5.1.46.jar" />
+ 
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+ <!-- 去除自动生成的注释 -->
+ <commentGenerator>
+  <property name="suppressAllComments" value="true" />
+ </commentGenerator>
+ 
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/app_data"
+        userId="root"
+        password="root">
+    </jdbcConnection>
+
+<!--     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/aws_hour"
+        userId="root"
+        password="qwsaqwsa1">
+    </jdbcConnection> -->
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+ 
+ <!-- targetProject:自动生成代码的位置 -->
+    <javaModelGenerator targetPackage="com.vormela.common.user.entity" targetProject="">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+
+    <sqlMapGenerator targetPackage="com.vormela.common.user.dao"  targetProject="">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.vormela.common.user.dao"  targetProject="">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+ 
+ <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
+<!--     <table schema="" tableName="caiwuxinxi" domainObjectName="Caiwuxinxi" > </table>
+    <table schema="" tableName="changyongruanjian" domainObjectName="ChangYongRuanJian" > </table>
+    <table schema="" tableName="fuwuzhiling" domainObjectName="FuWuZhiLing" > </table>
+    <table schema="" tableName="haomaku" domainObjectName="HaoMaKu" > </table>
+
+
+    <table schema="" tableName="sys_department" domainObjectName="SysDepartment" > </table>
+    <table schema="" tableName="sys_fankuixinxi" domainObjectName="SysFankuixinxi" > </table>
+    <table schema="" tableName="wenjianxinxi" domainObjectName="WenJianXinXi" > </table>
+
+
+    <table schema="" tableName="xuexiziliao" domainObjectName="XueXiZiLiao" > </table>
+<table schema="" tableName="zhilingrizhi" domainObjectName="ZhiLingRiZhi" > </table>
+
+<table schema="" tableName="gongzuojilu" domainObjectName="GongZuoJiLu" > </table> -->
+
+
+
+
+ 
+  </context>
+  
+</generatorConfiguration>

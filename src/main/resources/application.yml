@@ -1,0 +1,40 @@
+server:  
+  port: 8080
+spring:
+ catalog:
+    url: jdbc:mysql://122.115.40.105:17002/catalog?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: Sinoeco_2018
+    filters: spider  
+ user:
+    url: jdbc:mysql://122.115.40.105:17002/user_center?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: Sinoeco_2018
+    filters: user_center  
+ datasource:  
+    type: com.alibaba.druid.pool.DruidDataSource  
+    driver-class-name: com.mysql.jdbc.Driver  
+    minIdle: 5  
+    maxActive: 20  
+    initialSize: 5  
+    maxWait: 50000
+    validationQuery: SELECT 1 FROM DUAL
+    timeBetweenEvictionRunsMillis: 90000  
+    minEvictableIdleTimeMillis: 300000  
+    testWhileIdle: true  
+    testOnBorrow: false  
+    testOnReturn: false 
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    cachePrepStmts: true
+http:
+  encoding.charset: UTF-8
+  encoding.enable: true
+  encoding.force: true       
+logging:
+  config: classpath:log4j2.xml
+  level:
+    com.shangdong: DEBUG
+    
+        
+    
