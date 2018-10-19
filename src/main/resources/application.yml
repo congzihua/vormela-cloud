@@ -27,6 +27,14 @@ spring:
     poolPreparedStatements: true
     maxPoolPreparedStatementPerConnectionSize: 20
     cachePrepStmts: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 http:
   encoding.charset: UTF-8
   encoding.enable: true

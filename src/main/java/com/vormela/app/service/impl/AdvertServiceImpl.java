@@ -17,8 +17,6 @@ public class AdvertServiceImpl implements IAdvertService{
 	private AdvertMapper advertMapper;
 	public List<Map> selectList(String sql){
 		log.info("【IAdvertService】【selectList】查询列表");
-		List rel = advertMapper.selectList(sql);
-		System.out.println(rel.size()+"============");
-		return rel;
+		return advertMapper.selectList(sql);
 	}
 }
