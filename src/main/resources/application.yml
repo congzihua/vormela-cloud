@@ -2,14 +2,14 @@ server:
   port: 8080
 spring:
  catalog:
-    url: jdbc:mysql://122.115.40.105:17002/catalog?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:17002/catalog?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
-    password: Sinoeco_2018
+    password: root
     filters: spider  
  user:
-    url: jdbc:mysql://122.115.40.105:17002/user_center?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:17002/user_center?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: root
-    password: Sinoeco_2018
+    password: root
     filters: user_center  
  datasource:  
     type: com.alibaba.druid.pool.DruidDataSource  
